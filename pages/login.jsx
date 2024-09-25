@@ -27,7 +27,7 @@ function Login() {
       try {
         const res = await axios.get("/api/user");
 
-        console.log(res);
+        // console.log(res);
         router.replace("/");
       } catch (error) {
         console.log(error.response.data.message);
@@ -67,8 +67,8 @@ function Login() {
           router.replace("/");
         }, 1500);
       } catch (error) {
-        console.log(error);
-        console.log(error.response.data);
+        // console.log(error);
+        // console.log(error.response.data);
         notify("error", error.response.data.message);
       }
     } else {

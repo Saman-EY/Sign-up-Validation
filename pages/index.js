@@ -13,6 +13,7 @@ function Index() {
         setName(data.data.userName);
       })
       .catch((error) => {
+        router.push("/login");
         if (error?.response?.data?.status === "failed") {
           router.push("/login");
         }
